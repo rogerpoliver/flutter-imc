@@ -14,6 +14,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   TextEditingController weightController = TextEditingController();
   TextEditingController heightController = TextEditingController();
+
+  String _infoText = "Please fill out the form";
+
+  void _resetFields() {
+    weightController.text = "";
+    heightController.text = "";
+    _infoText = "";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +36,7 @@ class _HomeState extends State<Home> {
                   color: Colors.amberAccent,
                   size: 35,
                   semanticLabel: 'Refresh Button'),
-              onPressed: () {},
+              onPressed: _resetFields,
             )
           ],
         ),
@@ -65,19 +74,21 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: Container(
-                  height: 50,
-                  child: RaisedButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Result",
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    height: 50,
+                    child: RaisedButton(
+                      onPressed: () {
+
+                      },
+                      child: Text(
+                        "Result",
+                        style: TextStyle(color: Colors.white, fontSize: 25),
+                      ),
+                      color: Colors.pinkAccent,
                     ),
-                    color: Colors.pinkAccent,
                   ),
                 ),
-                ),
                 Text(
-                  "Info",
+                  "$_infoText",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.pinkAccent, fontSize: 25),
                 )
