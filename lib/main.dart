@@ -72,11 +72,11 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           title: Text("IMC Calculator"),
           centerTitle: true,
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Colors.greenAccent,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.cached,
-                  color: Colors.amberAccent,
+                  color: Colors.teal,
                   size: 35,
                   semanticLabel: 'Refresh Button'),
               onPressed: _resetFields,
@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   Icon(
                     Icons.person,
-                    color: Colors.amber,
+                    color: Colors.lightBlueAccent,
                     size: 120,
                   ),
                   TextFormField(
@@ -101,9 +101,9 @@ class _HomeState extends State<Home> {
                     decoration: InputDecoration(
                         labelText: "Weight (Kg)",
                         labelStyle:
-                            TextStyle(color: Colors.pinkAccent, fontSize: 25)),
+                            TextStyle(color: Colors.teal, fontSize: 25)),
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.amber, fontSize: 25),
+                    style: TextStyle(color: Colors.grey, fontSize: 25),
                     controller: weightController,
                     validator: (value) {
                       if (value.isEmpty) {
@@ -117,9 +117,9 @@ class _HomeState extends State<Home> {
                     decoration: InputDecoration(
                         labelText: "Height (Cm)",
                         labelStyle:
-                            TextStyle(color: Colors.pinkAccent, fontSize: 25)),
+                            TextStyle(color: Colors.teal, fontSize: 25)),
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.amber, fontSize: 25),
+                    style: TextStyle(color: Colors.grey, fontSize: 25),
                     controller: heightController,
                     validator: (value) {
                       if (value.isEmpty) {
@@ -142,14 +142,14 @@ class _HomeState extends State<Home> {
                           "Result",
                           style: TextStyle(color: Colors.white, fontSize: 25),
                         ),
-                        color: Colors.pinkAccent,
+                        color: Colors.lightBlueAccent,
                       ),
                     ),
                   ),
                   Text(
                     "$_infoText",
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.pinkAccent, fontSize: 25),
+                    style: TextStyle(color: Colors.teal, fontSize: 25),
                   )
                 ],
               )),
