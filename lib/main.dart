@@ -23,6 +23,36 @@ class _HomeState extends State<Home> {
     _infoText = "";
   }
 
+  void _calculate() {
+    double weight = double.parse(weightController.text);
+    double height = double.parse(heightController.text) / 100;
+    double imc = weight / (height * height);
+    debugPrint(imc.toString());
+    if (imc < 15) {
+      _infoText = "$imc - Very severely underweight";
+    }else if(imc <= 16){
+      _infoText = "$imc - Severely underweight";
+    }else if(imc <= 18.5){
+      _infoText = "$imc - Underweight";
+    }else if(imc <= 25){
+      _infoText = "$imc - Normal (healthy weight)";
+    }else if(imc <= 30){
+      _infoText = "$imc - Overweight";
+    }else if(imc <= 35){
+      _infoText = "$imc - Obese Class I (Moderately obese)";
+    }else if(imc <= 40){
+      _infoText = "$imc - Obese Class II (Severely obese)";
+    }else if(imc <= 45){
+      _infoText = "$imc - Obese Class III (Very severely obese)";
+    }else if(imc <= 50){
+      _infoText = "$imc - Obese Class IV (Morbidly obese)";
+    }else if(imc <= 60){
+      _infoText = "$imc - Obese Class V (Super obese)";
+    }else if(imc > 60){
+      _infoText = "$imc - Obese Class VI (Hyper obese)";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,9 +106,7 @@ class _HomeState extends State<Home> {
                   child: Container(
                     height: 50,
                     child: RaisedButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: _calculate,
                       child: Text(
                         "Result",
                         style: TextStyle(color: Colors.white, fontSize: 25),
