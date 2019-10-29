@@ -18,7 +18,7 @@ Ps: IMC, Indice de Massa Corporal from Portuguese = BMI, Body Mass Index.
 | Obese Class III (Very severely obese) | 40   | 45   |
 | Obese Class IV (Morbidly obese)       | 45   | 50   |
 | Obese Class V (Super obese)           | 50   | 60   |
-| Obese Class VI (Hyper obese)          | 60   |      |
+| Obese Class VI (Hyper obese)          | 60   | +60  |
 
 
 ### Demonstration:
