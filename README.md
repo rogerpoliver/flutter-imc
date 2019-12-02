@@ -21,6 +21,6 @@ Ps: IMC, Indice de Massa Corporal from Portuguese = BMI, Body Mass Index.
 | Obese Class VI (Hyper obese)          | 60   | +60  |
 
 
-### Demonstration:
+### Demonstration :computer:
 
 ![Demo GIF](flutter-imc-demo.gif)
